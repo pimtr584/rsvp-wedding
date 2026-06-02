@@ -635,6 +635,13 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
   .details-grid { grid-template-columns: 1fr; gap: 1.75rem; }
   .detail-divider { width: 40px; height: 1px; margin: 0 auto; }
 }
+.field-error {
+  border-bottom: 1px solid #cc0000 !important;
+}
+
+.field-error-label {
+  color: #cc0000;
+}
 </style>
 </head>
 <body>
@@ -874,11 +881,35 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
     const fillTypeEl   = document.querySelector('input[name="fillType"]:checked');
     const btn          = document.getElementById('submitBtn');
 
-    if (!name)         { showMsg('กรุณากรอกชื่อของท่าน', 'error'); return; }
-    if (!attendEl)     { showMsg('กรุณาเลือกว่าจะมาร่วมงานหรือไม่', 'error'); return; }
-    if (!sideEl)       { showMsg('กรุณาเลือกว่าท่านเป็นแขกฝั่งใด', 'error'); return; }
-    if (!relationship) { showMsg('กรุณาเลือกความสัมพันธ์', 'error'); return; }
-    if (!fillTypeEl)   { showMsg('กรุณาเลือกประเภทการกรอก', 'error'); return; }
+    let hasError = false;
+    document.getElementById('guestName').classList.remove('field-error');
+    document.querySelector('.toggle-group')?.classList.remove('field-error');
+    
+    if (!name) {
+      document.getElementById('guestName').classList.add('field-error');
+      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
+      hasError = true;
+    }
+    if (!attendEl) {
+      document.querySelectorAll('.toggle-group label').forEach(l => l.style.borderColor = '#cc0000');
+      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
+      hasError = true;
+    }
+    if (!sideEl) {
+      document.querySelectorAll('.side-option label').forEach(l => l.style.borderColor = '#cc0000');
+      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
+      hasError = true;
+    }
+    if (!relationship) {
+      document.getElementById('relationship').classList.add('field-error');
+      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
+      hasError = true;
+    }
+    if (!fillTypeEl) {
+      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
+      hasError = true;
+    }
+    if (hasError) return;
 
     const attend   = attendEl.value;
     const side     = sideEl.value;
