@@ -661,13 +661,34 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
 <section class="invitation">
   <div class="invitation-inner">
     <span class="label">คำเชิญ</span>
-    <p class="family-text">นายสาโรจน์ ไตรสินธุ์ &nbsp; นางสมิตานัน ไตรสินธุ์</p>
-    <p class="family-text"><span class="family-and">และ</span></p>
-    <p class="family-text">นายเสกสรร สุขเนาว์ &nbsp; นางจิรพันธ์ สุขเนาว์</p>
+    
+    <!-- แก้ไขส่วนที่ 1: จัดรายชื่อพ่อแม่ ซ้าย-กลาง-ขวา -->
+    <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 1.5rem;">
+      
+      <!-- ฝั่งซ้าย (พ่อแม่เจ้าสาว) -->
+      <div style="flex: 1; text-align: center;">
+        <p class="family-text" style="margin: 0; line-height: 1.6;">นายสาโรจน์ ไตรสินธุ์</p>
+        <p class="family-text" style="margin: 0; line-height: 1.6;">นางสมิตานัน ไตรสินธุ์</p>
+      </div>
+      
+      <!-- ตรงกลาง (และ) -->
+      <div style="padding: 0 10px;">
+        <span class="family-and">และ</span>
+      </div>
+      
+      <!-- ฝั่งขวา (พ่อแม่เจ้าบ่าว) -->
+      <div style="flex: 1; text-align: center;">
+        <p class="family-text" style="margin: 0; line-height: 1.6;">นายเสกสรร สุขเนาว์</p>
+        <p class="family-text" style="margin: 0; line-height: 1.6;">นางจิรพันธ์ สุขเนาว์</p>
+      </div>
+      
+    </div>
+
     <p class="invite-body">มีความยินดีเชิญท่านเป็นเกียรติ เนื่องในงานมงคลสมรส</p>
     <span class="ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
     
-    <div class="couple-names-large" style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap;">
+    <!-- แก้ไขส่วนที่ 2: ชื่อบ่าวสาว ซ้าย-ขวา -->
+    <div class="couple-names-large" style="display: flex; justify-content: center; align-items: center; gap: 15px; flex-wrap: wrap;">
       <span>พิมพ์ชนก ไตรสินธุ์ (ตอง)</span>
       <span class="couple-amp">&amp;</span>
       <span>ธารินทร์ สุขเนาว์ (นุก)</span>
