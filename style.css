@@ -35,18 +35,16 @@ body {
   position: absolute;
   inset: 0;
   z-index: 0;
-  overflow: hidden; /* เพิ่มบรรทัดนี้ เพื่อป้องกันไม่ให้รูปล้นทะลักออกนอกกรอบ */
+  overflow: hidden;
 }
 
 .main-hero-img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* สำคัญมาก: ทำหน้าที่เหมือน background-size: cover คือภาพขยายเต็มจอโดยไม่เบี้ยว */
-  object-position: center 15%; /* จัดตำแหน่งรูปภาพให้โฟกัสตรงส่วนหน้าของบ่าวสาวเหมือนเดิม */
+  object-fit: cover;
+  object-position: center 15%;
 }
 
-/* No brightness/filter — photo stays crisp */
-/* Subtle dark vignette on edges only */
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -64,7 +62,6 @@ body {
   z-index: 1;
 }
 
-/* Cream fade at very bottom connecting to next section */
 .hero-fade {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -73,74 +70,58 @@ body {
   z-index: 2;
 }
 
-/* Text pinned to bottom of hero */
 .hero-content {
   position: absolute;
   top: 3rem;
   left: 0; right: 0;
   z-index: 3;
   text-align: center;
-  padding: 0 2rem;
+  padding: 0 10px;
 }
 
 /* =========================================
    ส่วนจัดการฟอนต์และสัดส่วนของหน้าปก (Hero Section)
    ========================================= */
 
-/* บรรทัดที่ 1: WEDDING CEREMONY */
 .hero-eyebrow {
   font-family: 'Sarabun', sans-serif;
-  font-size: clamp(10px, 2.5vw, 14px);         /* ให้ตัวหนังสือย่ออัตโนมัติเมื่อจอเล็ก */
-  letter-spacing: clamp(4px, 1.5vw, 8px);      /* ให้ช่องไฟยืดหยุ่นตามหน้าจอ */
+  font-size: clamp(10px, 2.5vw, 14px);
+  letter-spacing: clamp(4px, 1.5vw, 8px);
   text-transform: uppercase;
   color: #FFFFFF;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   margin-bottom: 15px;
-  white-space: nowrap;                         /* ป้องกันข้อความร่วงตกลงมา */
+  white-space: nowrap;
 }
 
-/* ขยายพื้นที่ด้านข้างให้ข้อความ (ลด padding ซ้ายขวาจาก 2rem เหลือแค่ 10px) */
-.hero-content {
-  position: absolute;
-  top: 3rem;
-  left: 0; right: 0;
-  z-index: 3;
-  text-align: center;
-  padding: 0 10px;  /* <--- ปรับตรงนี้แหละครับ เคล็ดลับเพิ่มพื้นที่ */
-}
-
-/* บรรทัดที่ 2: Pimchanok & Taryn */
 .hero-names {
   font-family: 'Cormorant Garamond', serif;
-  /* ดันขนาดให้ใหญ่ขึ้น: ต่ำสุด 36px, ขยายเต็มที่ 11.5% ของจอ, สูงสุด 58px */
   font-size: clamp(36px, 11.5vw, 58px); 
   font-weight: 400;
   font-style: italic;
-  letter-spacing: 0px;                         /* เอาช่องไฟออกเพื่อให้อัดฟอนต์ได้ใหญ่ขึ้น */
+  letter-spacing: 0px;
   color: #FFFFFF;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   margin: 0;
   line-height: 1.1;
-  white-space: nowrap;                         /* บังคับบรรทัดเดียวเหมือนเดิม */
+  white-space: nowrap;
 }
 
-/* เครื่องหมาย & ระหว่างชื่อ */
 .hero-amp {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: clamp(30px, 9vw, 48px);           /* ขยายตามชื่อหลัก */
+  font-size: clamp(30px, 9vw, 48px);
   color: #FFFFFF;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  margin: 0 6px;                               /* ลดระยะห่างซ้ายขวาของ & ลงนิดนึง */
+  margin: 0 6px;
 }
 
-/* บรรทัดที่ 3: LE PASIRI | 5.9.69 */
 .hero-date {
   font-family: 'Sarabun', sans-serif;
   font-size: 15px;
   letter-spacing: 4px;
-  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* เพิ่มเงาดำด้านหลัง */
+  color: #FFFFFF;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   margin-top: 20px;
 }
 
@@ -155,8 +136,8 @@ body {
 .invitation-inner { max-width: 540px; margin: 0 auto; }
 
 .label {
-  font-size: 0.53rem;
-  letter-spacing: 0;
+  font-size: 0.7rem;         /* ปรับขนาดให้อ่านง่าย */
+  letter-spacing: 1.5px;     /* เพิ่มช่องไฟนิดนึง */
   text-transform: uppercase;
   color: var(--gold);
   display: block;
@@ -164,22 +145,22 @@ body {
 }
 
 .family-text {
-  font-size: 0.82rem;
+  font-size: 0.95rem;        /* ปรับขนาดชื่อพ่อแม่ */
   color: var(--muted);
-  line-height: 2;
+  line-height: 1.8;
 }
 
 .family-and {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Sarabun', sans-serif; /* เปลี่ยนเป็น Sarabun */
   font-style: italic;
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--gold2);
 }
 
 .invite-body {
-  font-size: 0.82rem;
+  font-size: 0.95rem;        /* ปรับขนาดเนื้อหาคำเชิญ */
   color: var(--muted);
-  line-height: 1.9;
+  line-height: 1.8;
   margin-top: 1.25rem;
 }
 
@@ -193,13 +174,13 @@ body {
 
 .couple-names-large {
   display: flex;
-  flex-direction: column;  /* บังคับให้มือถือเรียงชื่อซ้อนกัน บน-ล่าง */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;                /* ระยะห่างระหว่างชื่อและเครื่องหมาย & */
+  gap: 8px;
   font-family: 'Sarabun', sans-serif;
   font-weight: 400;
-  font-size: clamp(18px, 5vw, 24px); /* ขนาดตัวหนังสือภาษาไทย */
+  font-size: clamp(18px, 5vw, 24px);
   color: var(--ink);
   line-height: 1.3;
 }
@@ -212,15 +193,12 @@ body {
   display: block;
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: clamp(28px, 8vw, 36px); /* ขนาดเครื่องหมาย & ให้ใหญ่กว่าชื่อนิดนึง */
+  font-size: clamp(28px, 8vw, 36px);
   color: var(--gold2);
   margin: 0;
   line-height: 1;
 }
 
-/* =======================================
-   เมื่อเปิดในจอคอม (Desktop) ให้กลับมาเรียงบรรทัดเดียว
-   ======================================= */
 @media (min-width: 768px) {
   .couple-names-large {
     flex-direction: row;
@@ -250,8 +228,8 @@ body {
 }
 
 .detail-label {
-  font-size: 0.52rem;
-  letter-spacing: 0;
+  font-size: 0.65rem;        /* ขยาย Label */
+  letter-spacing: 1px;
   text-transform: uppercase;
   color: rgba(255,255,255,0.65);
   display: block;
@@ -259,16 +237,16 @@ body {
 }
 
 .detail-value {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Sarabun', sans-serif; /* เปลี่ยนเป็น Sarabun */
   font-size: 1.15rem;
-  font-weight: 300;
+  font-weight: 500;                   /* เพิ่มความหนา */
   color: #fff;
   line-height: 1.55;
 }
 
 .detail-sub {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.62);
+  font-size: 0.85rem;        /* ขยายที่อยู่ย่อย */
+  color: rgba(255,255,255,0.8);
   margin-top: 0.3rem;
   letter-spacing: 0;
   line-height: 1.6;
@@ -324,14 +302,15 @@ body {
 }
 
 .sch-time {
-  font-size: 0.65rem;
-  letter-spacing: 0.12em;
+  font-family: 'Cormorant Garamond', serif; /* ให้ตัวเลขเป็น Garamond */
+  font-size: 1.15rem;
+  letter-spacing: 0.05em;
   color: var(--gold);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .sch-name {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Sarabun', sans-serif;      /* เปลี่ยนชื่อพิธีเป็น Sarabun */
   font-size: 1.1rem;
   color: var(--ink);
 }
@@ -364,9 +343,10 @@ body {
 }
 
 .rsvp-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 2.3rem;
+  font-family: 'Sarabun', sans-serif;      /* เปลี่ยนหัวข้อเป็น Sarabun */
+  font-weight: 400;
+  font-style: normal;                      /* เอาตัวเอียงออกสำหรับภาษาไทย */
+  font-size: 2rem;
   color: var(--ink);
   text-align: center;
   margin-bottom: 0.5rem;
@@ -475,9 +455,10 @@ input[type="text"]:focus { border-bottom-color: var(--gold); }
 }
 
 .side-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-style: italic;
-  font-size: 1.3rem;
+  font-family: 'Sarabun', sans-serif;      /* เปลี่ยนฟอนต์ภาษาไทยให้กลมกลืน */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
   color: var(--ink);
   display: block;
   line-height: 1.2;
@@ -501,11 +482,11 @@ input[type="text"]:focus { border-bottom-color: var(--gold); }
   width: 100%;
   margin-top: 2rem;
   padding: 1.15rem;
-  background: var(--gold);   /* แก้จาก var(--ink) เป็น var(--gold) */
+  background: var(--gold);
   border: none;
-  color: var(--white);       /* เปลี่ยนสีตัวหนังสือเป็นสีขาวให้อ่านง่าย */
+  color: var(--white);
   font-family: 'Sarabun', sans-serif;
-  font-weight: 400;          /* เพิ่มความหนาตัวอักษรนิดนึงจะได้เด่นขึ้น */
+  font-weight: 400;
   font-size: 0.95rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -514,10 +495,14 @@ input[type="text"]:focus { border-bottom-color: var(--gold); }
 }
 
 .btn-submit:hover { 
-  background: var(--gold2);  /* เมื่อเอาเมาส์ชี้ ให้สีทองเข้มขึ้น/อ่อนลงนิดนึง */
+  background: var(--gold2); 
   color: #fff; 
 }
-.btn-submit:disabled { opacity: 0.35; cursor: not-allowed; }
+.btn-submit:disabled { 
+  opacity: 0.6; 
+  cursor: not-wait; 
+  background-color: var(--muted);
+}
 
 .status-msg {
   font-size: 0.7rem;
@@ -552,23 +537,23 @@ input[type="text"]:focus { border-bottom-color: var(--gold); }
 }
 
 .success-title {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: 'Sarabun', sans-serif;      /* เปลี่ยนหัวข้อขอบคุณให้เป็น Sarabun */
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
   color: var(--ink);
   margin-bottom: 0.75rem;
 }
 
 .success-text {
-  font-size: 0.75rem;
+  font-size: 0.85rem;                      /* ขยายข้อความนิดนึงให้อ่านง่าย */
   color: var(--muted);
   line-height: 1.8;
 }
 
 /* ══ FOOTER ══ */
 footer {
-  background: var(--gold);               /* แก้จาก var(--ink) เป็น var(--gold) */
-  color: rgba(255, 255, 255, 0.9);       /* ปรับสีตัวอักษรให้สว่างขึ้นนิดนึง เพื่อให้ตัดกับพื้นสีทอง */
+  background: var(--gold);
+  color: rgba(255, 255, 255, 0.9);
   padding: 3rem 2rem;
   text-align: center;
   display: flex;
@@ -580,14 +565,14 @@ footer {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.5rem;
-  color: #FFFFFF;                        /* เปลี่ยนสีชื่อ Pimchanok & Taryn เป็นสีขาวสนิท */
+  color: #FFFFFF;
 }
 
 .footer-sub {
   font-size: 0.54rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);       /* ปรับสีวันที่ให้มองเห็นชัดขึ้นบนพื้นสีทอง */
+  color: rgba(255, 255, 255, 0.8);
 }
 
 
@@ -678,6 +663,7 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
   .details-grid { grid-template-columns: 1fr; gap: 1.75rem; }
   .detail-divider { width: 40px; height: 1px; margin: 0 auto; }
 }
+
 .field-error {
   border-bottom: 1px solid #cc0000 !important;
 }
@@ -685,14 +671,6 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
 .field-error-label {
   color: #cc0000;
 }
-
-/* เมื่อปุ่มโดน disabled ให้เปลี่ยนหน้าตาเพื่อให้รู้ว่ากำลังทำงาน */
-.btn-submit:disabled { 
-  opacity: 0.6; 
-  cursor: not-wait; 
-  background-color: var(--muted);
-}
-
 
 /* =========================================
    ปรับการแสดงผลสำหรับหน้าจอคอมพิวเตอร์ (Desktop)
@@ -711,7 +689,6 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
     overflow-x: hidden !important;
   }
 
-  /* 1. แก้รายชื่อพ่อแม่และบ่าวสาวล้น */
   .family-text {
     font-size: 14px !important; 
   }
@@ -719,6 +696,4 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
     font-size: 22px !important; 
     gap: 8px !important;
   }
-  
-  /* ลบส่วนที่ 2 (แก้ข้อความหน้าปก) ออก เพราะเราปรับแต่งคลาส .hero-names ฯลฯ ไว้ด้านบนแล้ว */
 }
