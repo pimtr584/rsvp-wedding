@@ -214,9 +214,6 @@
 </footer>
 
 <script>
-  const AIRTABLE_TOKEN   = 'patPcYXZ7IWL5XiTg.ed05f55a93f8dcdf1809a8df1af091c8507ca1c65eea7b5df003a311bf4d13a1';
-  const AIRTABLE_BASE_ID = 'appCk4yLsdR3lxKAH';
-  const AIRTABLE_TABLE   = 'RSVP';
 
   let count = 1;
   const countGroup = document.getElementById('countGroup');
@@ -291,29 +288,26 @@
     showMsg('กำลังส่งข้อมูล...', 'loading');
 
     try {
-      const res = await fetch(
-        `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${encodeURIComponent(AIRTABLE_TABLE)}`,
-        {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${AIRTABLE_TOKEN}`,
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            fields: {
-              'ชื่อ': name,
-              'การตอบรับ': attend,
-              'ฝั่งแขก': side,
-              'จำนวนคน': guests,
-              'ความสัมพันธ์': relationship,
-              'ประเภทการกรอก': fillType,
-              'เวลากรอก': now
-            }
-          })
-        }
-      );
+      // นำ Web App URL ที่เพิ่ง Copy มา วางในเครื่องหมาย '' ด้านล่างนี้ครับ
+      const scriptURL = 'https://script.google.com/macros/s/AKfycby5U4DhLMYTqkpa61uRtqvUeotc0JwSDo9HjfR2i3c2cJ0k2xiSpKih8_Jd_L_vBvt9/exec'; 
+      
+      const res = await fetch(scriptURL, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8'
+        },
+        body: JSON.stringify({
+          'ชื่อ': name,
+          'การตอบรับ': attend,
+          'ฝั่งแขก': side,
+          'จำนวนคน': guests,
+          'ความสัมพันธ์': relationship,
+          'ประเภทการกรอก': fillType,
+          'เวลากรอก': now
+        })
+      });
 
-      if (!res.ok) throw new Error('Airtable error');
+      if (!res.ok) throw new Error('Google Sheets error');
 
       document.getElementById('formWrap').classList.add('hidden');
       document.getElementById('successCard').classList.add('show');
