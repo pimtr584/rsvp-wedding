@@ -732,18 +732,13 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
     background-color: #EFEBE0 !important; 
   }
   body {
-    max-width: 1000px !important;
+    max-width: 750px !important;  /* 👈 เปลี่ยนแค่จุดนี้จุดเดียวครับ (จาก 500px เป็น 1000px) */
     margin: 0 auto !important;
     position: relative !important;
     background-color: #FAF6EE !important;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) !important;
     min-height: 100vh !important;
     overflow-x: hidden !important;
-  }
-
-  /* ❗ เพิ่มโค้ดนี้ เพื่อเลื่อนจุดโฟกัสรูปให้เห็นบ่าวสาวเวลาดูบนคอม */
-  .main-hero-img {
-    object-position: center 80% !important; 
   }
 
   .family-text {
