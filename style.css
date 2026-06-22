@@ -743,7 +743,7 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
 
   /* ❗ เพิ่มโค้ดนี้ เพื่อเลื่อนจุดโฟกัสรูปให้เห็นบ่าวสาวเวลาดูบนคอม */
   .main-hero-img {
-    object-position: center 80% !important; 
+    object-position: center 90% !important; 
   }
 
   .family-text {
