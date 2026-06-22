@@ -468,19 +468,22 @@ input[type="text"]:focus { border-bottom-color: var(--gold); }
   width: 100%;
   margin-top: 2rem;
   padding: 1.15rem;
-  background: var(--ink);
+  background: var(--gold);   /* แก้จาก var(--ink) เป็น var(--gold) */
   border: none;
-  color: var(--cream);
+  color: var(--white);       /* เปลี่ยนสีตัวหนังสือเป็นสีขาวให้อ่านง่าย */
   font-family: 'Sarabun', sans-serif;
-  font-weight: 300;
-  font-size: 0.9rem;
-  letter-spacing: 0;
+  font-weight: 400;          /* เพิ่มความหนาตัวอักษรนิดนึงจะได้เด่นขึ้น */
+  font-size: 0.95rem;
+  letter-spacing: 1px;
   text-transform: uppercase;
   cursor: pointer;
   transition: background 0.3s;
 }
 
-.btn-submit:hover { background: var(--gold); color: #fff; }
+.btn-submit:hover { 
+  background: var(--gold2);  /* เมื่อเอาเมาส์ชี้ ให้สีทองเข้มขึ้น/อ่อนลงนิดนึง */
+  color: #fff; 
+}
 .btn-submit:disabled { opacity: 0.35; cursor: not-allowed; }
 
 .status-msg {
@@ -531,8 +534,8 @@ input[type="text"]:focus { border-bottom-color: var(--gold); }
 
 /* ══ FOOTER ══ */
 footer {
-  background: var(--ink);
-  color: rgba(255,255,255,0.5);
+  background: var(--gold);               /* แก้จาก var(--ink) เป็น var(--gold) */
+  color: rgba(255, 255, 255, 0.9);       /* ปรับสีตัวอักษรให้สว่างขึ้นนิดนึง เพื่อให้ตัดกับพื้นสีทอง */
   padding: 3rem 2rem;
   text-align: center;
   display: flex;
@@ -544,13 +547,14 @@ footer {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
   font-size: 1.5rem;
-  color: rgba(255,255,255,0.85);
+  color: #FFFFFF;                        /* เปลี่ยนสีชื่อ Pimchanok & Taryn เป็นสีขาวสนิท */
 }
 
 .footer-sub {
   font-size: 0.54rem;
   letter-spacing: 0.4em;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);       /* ปรับสีวันที่ให้มองเห็นชัดขึ้นบนพื้นสีทอง */
 }
 
 
