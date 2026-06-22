@@ -7,14 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Sarabun:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet">
-
-
 <link rel="stylesheet" href="style.css">  
-  
 </head>
 <body>
 
-<!-- ══ HERO ══ -->
 <section class="hero">
   <div class="hero-bg">
     <img src="assets/images/main-photo.jpg" alt="Pimchanok & Taryn Wedding" class="main-hero-img">
@@ -33,26 +29,21 @@
   </div>
 </section>
 
-<!-- ══ INVITATION ══ -->
 <section class="invitation">
   <div class="invitation-inner">
     <span class="label">คำเชิญ</span>
     
-    <!-- แก้ไขส่วนที่ 1: จัดรายชื่อพ่อแม่ ซ้าย-กลาง-ขวา -->
     <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 1.5rem;">
       
-      <!-- ฝั่งซ้าย (พ่อแม่เจ้าสาว) -->
       <div style="flex: 1; text-align: center;">
         <p class="family-text" style="margin: 0; line-height: 1.6;">นายสาโรจน์ ไตรสินธุ์</p>
         <p class="family-text" style="margin: 0; line-height: 1.6;">นางสมิตานัน ไตรสินธุ์</p>
       </div>
       
-      <!-- ตรงกลาง (และ) -->
       <div style="padding: 0 10px;">
         <span class="family-and">และ</span>
       </div>
       
-      <!-- ฝั่งขวา (พ่อแม่เจ้าบ่าว) -->
       <div style="flex: 1; text-align: center;">
         <p class="family-text" style="margin: 0; line-height: 1.6;">นายเสกสรร สุขเนาว์</p>
         <p class="family-text" style="margin: 0; line-height: 1.6;">นางจิรพันธ์ สุขเนาว์</p>
@@ -63,7 +54,6 @@
     <p class="invite-body">มีความยินดีเชิญท่านเป็นเกียรติ เนื่องในงานมงคลสมรส</p>
     <span class="ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
     
-<!-- แก้ไขส่วนที่ 2: ชื่อบ่าวสาว ซ้าย-ขวา (บังคับให้อยู่บรรทัดเดียวกัน) -->
     <div class="couple-names-large" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 15px; flex-wrap: nowrap;">
       <span style="white-space: nowrap;">พิมพ์ชนก ไตรสินธุ์ (ตอง)</span>
       <span class="couple-amp" style="margin: 0;">&amp;</span>
@@ -73,7 +63,6 @@
   </div>
 </section>
 
-<!-- ══ DETAILS ══ -->
 <div class="details-band">
   <div class="details-grid">
     <div class="detail-col">
@@ -90,18 +79,16 @@
   </div>
 </div>
 
-<!-- ══ SCHEDULE ══ -->
 <section class="schedule-section">
   <span class="label" style="text-align:center;display:block;">กำหนดการ</span>
   <h2 class="section-title">Order of the Day</h2>
   <ul class="schedule-list">
     <li class="schedule-row"><span class="sch-time">07.09</span><span class="sch-name">พิธีสงฆ์</span></li>
-    <li class="schedule-row"><span class="sch-time">08.39</span><span class="sch-name">แห่ขันหมาก</span></li>
+    <li class="schedule-row"><span class="sch-time">08.29</span><span class="sch-name">แห่ขันหมาก</span></li>
     <li class="schedule-row"><span class="sch-time">10.09</span><span class="sch-name">รดน้ำสังข์</span></li>
-    <li class="schedule-row"><span class="sch-time">11.09</span><span class="sch-name">ร่วมรับประทานอาหาร</span></li>
+    <li class="schedule-row"><span class="sch-time">11.00</span><span class="sch-name">ร่วมรับประทานอาหาร</span></li>
   </ul>
 
-  <!-- Theme Colors -->
   <div class="theme-colors">
     <span class="label" style="text-align:center;display:block;margin-bottom:1.25rem;">Theme Color</span>
     <div class="color-circles">
@@ -113,220 +100,8 @@
   </div>
 </section>
 
-<!-- ══ DIVIDER ══ -->
 <div class="divider-row">
   <div class="divider-line"></div>
   <span class="divider-mark">ตอบรับการเข้าร่วม</span>
   <div class="divider-line"></div>
 </div>
-
-<!-- ══ RSVP ══ -->
-<section class="rsvp-section" id="rsvp">
-  <span class="label" style="text-align:center;display:block;margin-bottom:0.75rem;">RSVP</span>
-  <h2 class="rsvp-title">ยืนยันการเข้าร่วม</h2>
-  <p class="rsvp-sub">กรุณาตอบรับเพื่อให้เราจัดเตรียมพร้อมสำหรับทุกท่าน</p>
-
-  <div class="form-wrap" id="formWrap">
-    <div class="form-group">
-      <label class="form-label" for="guestName">ชื่อ – นามสกุล หรือ ชื่อเล่น หรือ ชื่อที่สามารถระบุตัวตนได้ง่าย </label>
-      <input type="text" id="guestName" placeholder="กรอกชื่อของท่าน" autocomplete="name">
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">ท่านสามารถมาร่วมงานหรือไม่</label>
-      <div class="toggle-group">
-        <input type="radio" name="attend" id="yes" value="ยืนยันเข้าร่วมงาน">
-        <label for="yes">ยืนยันเข้าร่วมงาน</label>
-        <input type="radio" name="attend" id="no" value="ไม่สามารถเข้าร่วมงาน">
-        <label for="no">ไม่สามารถเข้าร่วมงาน</label>
-      </div>
-    </div>
-
-    <div class="form-group count-group hidden" id="countGroup">
-      <label class="form-label">จำนวนผู้เข้าร่วม (รวมท่านด้วย)</label>
-      <div class="count-control">
-        <button class="count-btn" id="countDown" type="button">−</button>
-        <span class="count-display" id="countDisplay">1</span>
-        <button class="count-btn" id="countUp" type="button">+</button>
-      </div>
-      <input type="hidden" id="guestCount" value="1">
-    </div>
-
-    <div class="form-group">
-      <label class="form-label">ท่านเป็นแขกฝั่งใด</label>
-      <div class="side-options">
-        <div class="side-option">
-          <input type="radio" name="side" id="side-groom" value="ฝั่งเจ้าบ่าว">
-          <label for="side-groom">
-            <span class="side-name">นุก</span>
-            <span class="side-sub">ฝั่งเจ้าบ่าว</span>
-          </label>
-        </div>
-        <div class="side-option">
-          <input type="radio" name="side" id="side-bride" value="ฝั่งเจ้าสาว">
-          <label for="side-bride">
-            <span class="side-name">ตอง</span>
-            <span class="side-sub">ฝั่งเจ้าสาว</span>
-          </label>
-        </div>
-      </div>
-
-    <!-- Extra fields โผล่หลังเลือกฝั่ง -->
-    <div class="extra-fields" id="extraFields">
-      <div class="form-group" style="margin-bottom:0;">
-        <label class="form-label">ความสัมพันธ์</label>
-        <select class="form-select" id="relationship">
-          <option value="" disabled selected>กรุณาเลือก</option>
-          <option value="เพื่อนสมัยเรียน">เพื่อนสมัยเรียน</option>
-          <option value="เพื่อนร่วมงาน">เพื่อนร่วมงาน</option>
-          <option value="เพื่อนพ่อแม่">เพื่อนพ่อแม่</option>
-          <option value="ญาติ">ญาติ</option>
-        </select>
-      </div>
-
-      <div class="form-group" style="margin-bottom:0;">
-        <label class="form-label">ประเภทการกรอก</label>
-        <div class="mini-radio-group">
-          <input type="radio" name="fillType" id="fill-first" value="การกรอกครั้งแรก">
-          <label for="fill-first">การกรอกครั้งแรก</label>
-          <input type="radio" name="fillType" id="fill-edit" value="การแก้ไข">
-          <label for="fill-edit">การแก้ไข</label>
-        </div>
-      </div>
-    </div>
-    </div>
-
-    <button class="btn-submit" id="submitBtn" type="button">ส่งการตอบรับ</button>
-    <p class="status-msg" id="statusMsg"></p>
-  </div>
-
-  <div class="success-card" id="successCard">
-    <span class="success-icon">Thank you</span>
-    <h3 class="success-title" id="successTitle">ขอบคุณมาก</h3>
-    <p class="success-text" id="successText">เราได้รับการตอบรับของท่านแล้ว<br>แล้วพบกันในวันงาน</p>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer>
-  <span class="footer-names">Pimchanok<br>&amp;<br>Taryn</span>
-  <span class="footer-sub">5 · 9 · 2569 · LE PASIRI · นนทบุรี</span>
-</footer>
-
-<script>
-
-  let count = 1;
-  const countGroup = document.getElementById('countGroup');
-
-  function updateCount(n) {
-    count = Math.max(1, Math.min(5, n));
-    document.getElementById('countDisplay').textContent = count;
-    document.getElementById('guestCount').value = count;
-  }
-
-  document.getElementById('countDown').addEventListener('click', () => updateCount(count - 1));
-  document.getElementById('countUp').addEventListener('click',   () => updateCount(count + 1));
-
-  // Show extra fields when side is selected
-  document.querySelectorAll('input[name="side"]').forEach(r => {
-    r.addEventListener('change', () => {
-      document.getElementById('extraFields').classList.add('show');
-    });
-  });
-
-  document.querySelectorAll('input[name="attend"]').forEach(r => {
-    r.addEventListener('change', () => {
-      countGroup.classList.toggle('hidden', r.value !== 'ยืนยันเข้าร่วมงาน');
-    });
-  });
-
-  document.getElementById('submitBtn').addEventListener('click', async () => {
-    const name         = document.getElementById('guestName').value.trim();
-    const attendEl     = document.querySelector('input[name="attend"]:checked');
-    const sideEl       = document.querySelector('input[name="side"]:checked');
-    const relationship = document.getElementById('relationship').value;
-    const fillTypeEl   = document.querySelector('input[name="fillType"]:checked');
-    const btn          = document.getElementById('submitBtn');
-
-    let hasError = false;
-    document.getElementById('guestName').classList.remove('field-error');
-    document.querySelector('.toggle-group')?.classList.remove('field-error');
-    
-    if (!name) {
-      document.getElementById('guestName').classList.add('field-error');
-      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
-      hasError = true;
-    }
-    if (!attendEl) {
-      document.querySelectorAll('.toggle-group label').forEach(l => l.style.borderColor = '#cc0000');
-      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
-      hasError = true;
-    }
-    if (!sideEl) {
-      document.querySelectorAll('.side-option label').forEach(l => l.style.borderColor = '#cc0000');
-      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
-      hasError = true;
-    }
-    if (!relationship) {
-      document.getElementById('relationship').classList.add('field-error');
-      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
-      hasError = true;
-    }
-    if (!fillTypeEl) {
-      showMsg('กรุณากรอกข้อมูลให้ครบถ้วน', 'error');
-      hasError = true;
-    }
-    if (hasError) return;
-
-    const attend   = attendEl.value;
-    const side     = sideEl.value;
-    const fillType = fillTypeEl.value;
-    const guests   = attend === 'ยืนยันเข้าร่วมงาน' ? count : 0;
-    const now      = new Date().toISOString();
-
-    btn.disabled = true;
-    showMsg('กำลังส่งข้อมูล...', 'loading');
-
-    try {
-      // นำ Web App URL ที่เพิ่ง Copy มา วางในเครื่องหมาย '' ด้านล่างนี้ครับ
-      const scriptURL = 'https://script.google.com/macros/s/AKfycby5U4DhLMYTqkpa61uRtqvUeotc0JwSDo9HjfR2i3c2cJ0k2xiSpKih8_Jd_L_vBvt9/exec'; 
-      
-      const res = await fetch(scriptURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'text/plain;charset=utf-8'
-        },
-        body: JSON.stringify({
-          'ชื่อ': name,
-          'การตอบรับ': attend,
-          'ฝั่งแขก': side,
-          'จำนวนคน': guests,
-          'ความสัมพันธ์': relationship,
-          'ประเภทการกรอก': fillType,
-          'เวลากรอก': now
-        })
-      });
-
-      if (!res.ok) throw new Error('Google Sheets error');
-
-      document.getElementById('formWrap').classList.add('hidden');
-      document.getElementById('successCard').classList.add('show');
-
-      if (attend !== 'ยืนยันเข้าร่วมงาน') {
-        document.getElementById('successTitle').textContent = 'ขอบคุณที่แจ้งให้ทราบ';
-        document.getElementById('successText').textContent  = 'เราเข้าใจและขอบคุณที่ส่งความปรารถนาดีมา\nหวังว่าจะได้พบกันในโอกาสหน้า';
-      }
-    } catch (e) {
-      showMsg('เกิดข้อผิดพลาด กรุณาลองใหม่อีกครั้ง', 'error');
-      btn.disabled = false;
-    }
-  });
-
-  function showMsg(text, type) {
-    const msg = document.getElementById('statusMsg');
-    msg.textContent = text;
-    msg.className   = 'status-msg ' + type;
-  }
-</script>
-</body>
-</html>
