@@ -649,6 +649,13 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
   color: #cc0000;
 }
 
+/* เมื่อปุ่มโดน disabled ให้เปลี่ยนหน้าตาเพื่อให้รู้ว่ากำลังทำงาน */
+.btn-submit:disabled { 
+  opacity: 0.6; 
+  cursor: not-wait; 
+  background-color: var(--muted);
+}
+
 
 /* =========================================
    ปรับการแสดงผลสำหรับหน้าจอคอมพิวเตอร์ (Desktop)
@@ -664,10 +671,10 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
     background-color: #FAF6EE !important;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) !important;
     min-height: 100vh !important;
-    overflow-x: hidden !important; /* ซ่อนส่วนที่ล้นออกไป ป้องกันการเลื่อนซ้ายขวา */
+    overflow-x: hidden !important;
   }
 
-  /* 1. แก้รายชื่อพ่อแม่และบ่าวสาวล้น (ย่อขนาดฟอนต์ให้พอดีกล่อง 500px) */
+  /* 1. แก้รายชื่อพ่อแม่และบ่าวสาวล้น */
   .family-text {
     font-size: 14px !important; 
   }
@@ -676,15 +683,5 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
     gap: 8px !important;
   }
   
-  /* 2. แก้ข้อความหน้าปกใหญ่ทะลุจอ */
-  /* หมายเหตุ: ผมใส่คลาสเผื่อไว้ให้ แต่ถ้าลองแล้วหน้าปกยังใหญ่อยู่ รบกวนก๊อปปี้โค้ด HTML ส่วนหน้าปกมาให้ผมนิดนึงนะครับ */
-  .hero-bg h1, .hero-content h1, h1 {
-    font-size: 42px !important;
-  }
-  .hero-bg h2, .hero-content h2, h2, .hero-date {
-    font-size: 24px !important;
-  }
-  .hero-bg p, .hero-content p {
-    font-size: 18px !important;
-  }
+  /* ลบส่วนที่ 2 (แก้ข้อความหน้าปก) ออก เพราะเราปรับแต่งคลาส .hero-names ฯลฯ ไว้ด้านบนแล้ว */
 }
