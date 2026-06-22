@@ -192,19 +192,40 @@ body {
 }
 
 .couple-names-large {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 300;
-  font-style: italic;
-  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
+  display: flex;
+  flex-direction: column;  /* บังคับให้มือถือเรียงชื่อซ้อนกัน บน-ล่าง */
+  justify-content: center;
+  align-items: center;
+  gap: 8px;                /* ระยะห่างระหว่างชื่อและเครื่องหมาย & */
+  font-family: 'Sarabun', sans-serif;
+  font-weight: 400;
+  font-size: clamp(18px, 5vw, 24px); /* ขนาดตัวหนังสือภาษาไทย */
   color: var(--ink);
-  line-height: 1.2;
+  line-height: 1.3;
+}
+
+.couple-names-large span {
+  text-align: center;
 }
 
 .couple-amp {
   display: block;
-  font-size: 0.62em;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: clamp(28px, 8vw, 36px); /* ขนาดเครื่องหมาย & ให้ใหญ่กว่าชื่อนิดนึง */
   color: var(--gold2);
-  line-height: 1.5;
+  margin: 0;
+  line-height: 1;
+}
+
+/* =======================================
+   เมื่อเปิดในจอคอม (Desktop) ให้กลับมาเรียงบรรทัดเดียว
+   ======================================= */
+@media (min-width: 768px) {
+  .couple-names-large {
+    flex-direction: row;
+    gap: 15px;
+  }
 }
 
 /* ══ DETAILS BAND ══ */
