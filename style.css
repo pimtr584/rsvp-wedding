@@ -22,6 +22,19 @@ body {
   letter-spacing: 0.03;
 }
 
+/* สร้าง Animation ให้ค่อยๆ ปรากฏและลอยขึ้น */
+@keyframes heroFadeUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+
 /* ══ HERO — full-bleed, photo untouched ══ */
 .hero {
   position: relative;
@@ -83,6 +96,7 @@ body {
    ส่วนจัดการฟอนต์และสัดส่วนของหน้าปก (Hero Section)
    ========================================= */
 
+/* บรรทัดที่ 1: WEDDING CEREMONY */
 .hero-eyebrow {
   font-family: 'Sarabun', sans-serif;
   font-size: clamp(10px, 2.5vw, 14px);
@@ -92,8 +106,14 @@ body {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   margin-bottom: 15px;
   white-space: nowrap;
+  
+  /* --- ส่วนที่เพิ่ม Animation --- */
+  opacity: 0; /* ซ่อนไว้ก่อน */
+  animation: heroFadeUp 1.2s ease-out forwards;
+  animation-delay: 0.5s; /* รอ 0.5 วินาที ให้รูปชัดก่อนแล้วค่อยโชว์ */
 }
 
+/* บรรทัดที่ 2: Pimchanok & Taryn */
 .hero-names {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(36px, 11.5vw, 58px); 
@@ -105,8 +125,14 @@ body {
   margin: 0;
   line-height: 1.1;
   white-space: nowrap;
+  
+  /* --- ส่วนที่เพิ่ม Animation --- */
+  opacity: 0;
+  animation: heroFadeUp 1.2s ease-out forwards;
+  animation-delay: 0.9s; /* โชว์ตามมาหลังจากบรรทัดแรกนิดนึง */
 }
 
+/* เครื่องหมาย & ระหว่างชื่อ (คงไว้เหมือนเดิม ไม่ต้องแก้ เพราะมันจะลอยมาพร้อมชื่อครับ) */
 .hero-amp {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
@@ -116,6 +142,7 @@ body {
   margin: 0 6px;
 }
 
+/* บรรทัดที่ 3: LE PASIRI | 5.9.69 */
 .hero-date {
   font-family: 'Sarabun', sans-serif;
   font-size: 15px;
@@ -123,6 +150,11 @@ body {
   color: #FFFFFF;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   margin-top: 20px;
+  
+  /* --- ส่วนที่เพิ่ม Animation --- */
+  opacity: 0;
+  animation: heroFadeUp 1.2s ease-out forwards;
+  animation-delay: 1.3s; /* โชว์เป็นอันดับสุดท้าย */
 }
 
 /* ══ INVITATION ══ */
