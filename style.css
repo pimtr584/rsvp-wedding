@@ -637,3 +637,24 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
 .field-error-label {
   color: #cc0000;
 }
+
+
+/* =========================================
+   ปรับการแสดงผลสำหรับหน้าจอคอมพิวเตอร์ (Desktop)
+   ========================================= */
+@media (min-width: 768px) {
+  /* ทำให้พื้นหลังจอคอมพิวเตอร์รอบๆ เป็นสีเทา/ครีมอ่อนๆ ให้การ์ดดูโดดเด่น */
+  html {
+    background-color: #EFEBE0; 
+  }
+
+  /* จำกัดความกว้างของการ์ดให้เท่ากับมือถือ และจัดให้อยู่กึ่งกลาง */
+  body {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    background-color: var(--cream); /* ใช้สีพื้นหลังเดิมของการ์ด */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); /* เพิ่มเงาให้ดูเป็นการ์ดกระดาษ */
+    min-height: 100vh;
+  }
+}
