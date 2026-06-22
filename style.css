@@ -90,36 +90,37 @@ body {
 /* บรรทัดที่ 1: WEDDING CEREMONY */
 .hero-eyebrow {
   font-family: 'Sarabun', sans-serif;
-  font-size: 14px;
-  letter-spacing: 8px;
+  font-size: clamp(10px, 2.5vw, 14px);         /* ให้ตัวหนังสือย่ออัตโนมัติเมื่อจอเล็ก */
+  letter-spacing: clamp(4px, 1.5vw, 8px);      /* ให้ช่องไฟยืดหยุ่นตามหน้าจอ */
   text-transform: uppercase;
-  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* เพิ่มเงาดำด้านหลัง */
+  color: #FFFFFF;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
   margin-bottom: 15px;
+  white-space: nowrap;                         /* ป้องกันข้อความร่วงตกลงมา */
 }
 
 /* บรรทัดที่ 2: Pimchanok & Taryn */
 .hero-names {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 62px;
+  font-size: clamp(28px, 8vw, 44px);           /* จำกัดขนาดสูงสุด 44px และย่อลงเหลือ 28px ในจอมือถือเล็ก */
   font-weight: 400;
-  font-style: italic;                          /* บังคับให้เป็นตัวเอียง */
-  letter-spacing: 2px;
-  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* เพิ่มเงาดำให้เข้มขึ้นนิดนึงเพื่อให้อ่านชื่อชัดๆ */
+  font-style: italic;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   margin: 0;
   line-height: 1.1;
-  white-space: nowrap;
+  white-space: nowrap;                         /* บังคับให้อยู่บรรทัดเดียวกันเสมอ */
 }
 
 /* เครื่องหมาย & ระหว่างชื่อ */
 .hero-amp {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: 46px;
-  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* เพิ่มเงาดำ */
-  margin: 0 10px;
+  font-size: clamp(24px, 6vw, 36px);           /* ย่อเครื่องหมายตามขนาดชื่อ */
+  color: #FFFFFF;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+  margin: 0 8px;
 }
 
 /* บรรทัดที่ 3: LE PASIRI | 5.9.69 */
