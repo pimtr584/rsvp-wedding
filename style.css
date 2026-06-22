@@ -732,7 +732,7 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
     background-color: #EFEBE0 !important; 
   }
   body {
-    max-width: 500px !important;
+    max-width: 1000px !important;  /* 👈 เปลี่ยนแค่จุดนี้จุดเดียวครับ (จาก 500px เป็น 1000px) */
     margin: 0 auto !important;
     position: relative !important;
     background-color: #FAF6EE !important;
