@@ -99,28 +99,39 @@ body {
   white-space: nowrap;                         /* ป้องกันข้อความร่วงตกลงมา */
 }
 
+/* ขยายพื้นที่ด้านข้างให้ข้อความ (ลด padding ซ้ายขวาจาก 2rem เหลือแค่ 10px) */
+.hero-content {
+  position: absolute;
+  top: 3rem;
+  left: 0; right: 0;
+  z-index: 3;
+  text-align: center;
+  padding: 0 10px;  /* <--- ปรับตรงนี้แหละครับ เคล็ดลับเพิ่มพื้นที่ */
+}
+
 /* บรรทัดที่ 2: Pimchanok & Taryn */
 .hero-names {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(28px, 8vw, 44px);           /* จำกัดขนาดสูงสุด 44px และย่อลงเหลือ 28px ในจอมือถือเล็ก */
+  /* ดันขนาดให้ใหญ่ขึ้น: ต่ำสุด 36px, ขยายเต็มที่ 11.5% ของจอ, สูงสุด 58px */
+  font-size: clamp(36px, 11.5vw, 58px); 
   font-weight: 400;
   font-style: italic;
-  letter-spacing: 1px;
+  letter-spacing: 0px;                         /* เอาช่องไฟออกเพื่อให้อัดฟอนต์ได้ใหญ่ขึ้น */
   color: #FFFFFF;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
   margin: 0;
   line-height: 1.1;
-  white-space: nowrap;                         /* บังคับให้อยู่บรรทัดเดียวกันเสมอ */
+  white-space: nowrap;                         /* บังคับบรรทัดเดียวเหมือนเดิม */
 }
 
 /* เครื่องหมาย & ระหว่างชื่อ */
 .hero-amp {
   font-family: 'Cormorant Garamond', serif;
   font-style: italic;
-  font-size: clamp(24px, 6vw, 36px);           /* ย่อเครื่องหมายตามขนาดชื่อ */
+  font-size: clamp(30px, 9vw, 48px);           /* ขยายตามชื่อหลัก */
   color: #FFFFFF;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  margin: 0 8px;
+  margin: 0 6px;                               /* ลดระยะห่างซ้ายขวาของ & ลงนิดนึง */
 }
 
 /* บรรทัดที่ 3: LE PASIRI | 5.9.69 */
