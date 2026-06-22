@@ -1,0 +1,23 @@
+/* นำโค้ด CSS ทั้งหมดมาวางไว้ที่นี่ */
+
+*, *::before, *::after { 
+  box-sizing: border-box; 
+  margin: 0; 
+  padding: 0; 
+}
+
+:root {
+  --cream: #FAF6EE;
+  --cream2: #F0E9D8;
+  --gold: #B8972A;
+  --gold2: #D4AF3A;
+  --gold-pale: #F5EDD8;
+  --ink: #1A1A1A;
+  --muted: #88866E;
+  --border: rgba(184,151,42,0.22);
+  --white: #FDFAF3;
+}
+
+html { scroll-behavior: smooth; }
+
+/* ... (วางโค้ด CSS อื่นๆ ของคุณต่อจากบรรทัดนี้ลงไปให้หมดเลยครับ) ... */
