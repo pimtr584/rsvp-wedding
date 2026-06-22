@@ -90,41 +90,46 @@ body {
 /* บรรทัดที่ 1: WEDDING CEREMONY */
 .hero-eyebrow {
   font-family: 'Sarabun', sans-serif;
-  font-size: 14px;            /* ปรับขนาดความเล็กใหญ่ตรงนี้ */
-  letter-spacing: 8px;        /* เพิ่มช่องไฟระหว่างตัวอักษรให้ดูกว้างๆ หรูๆ */
+  font-size: 14px;
+  letter-spacing: 8px;
   text-transform: uppercase;
-  color: var(--gold);         /* ใช้สีทอง หรือเปลี่ยนเป็น var(--ink) ถ้าอยากได้สีดำ */
-  margin-bottom: 15px;        /* ระยะห่างจากชื่อบ่าวสาว */
+  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* เพิ่มเงาดำด้านหลัง */
+  margin-bottom: 15px;
 }
 
 /* บรรทัดที่ 2: Pimchanok & Taryn */
 .hero-names {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 56px;            /* ปรับขนาดชื่อให้ใหญ่เด่นชัด */
+  font-size: 62px;
   font-weight: 400;
+  font-style: italic;                          /* บังคับให้เป็นตัวเอียง */
   letter-spacing: 2px;
-  color: var(--ink);
+  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* เพิ่มเงาดำให้เข้มขึ้นนิดนึงเพื่อให้อ่านชื่อชัดๆ */
   margin: 0;
   line-height: 1.1;
-  white-space: nowrap;        /* บังคับให้อยู่บรรทัดเดียวกันเสมอ */
+  white-space: nowrap;
 }
 
 /* เครื่องหมาย & ระหว่างชื่อ */
 .hero-amp {
   font-family: 'Cormorant Garamond', serif;
-  font-style: italic;         /* ทำให้ตัว & เอียง ดูคลาสสิกขึ้น */
-  font-size: 46px;            /* ปรับให้เล็กกว่าชื่อนิดหน่อยจะดูสวยครับ */
-  color: var(--gold);
-  margin: 0 10px;             /* ระยะห่างซ้ายขวาของเครื่องหมาย & */
+  font-style: italic;
+  font-size: 46px;
+  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7); /* เพิ่มเงาดำ */
+  margin: 0 10px;
 }
 
 /* บรรทัดที่ 3: LE PASIRI | 5.9.69 */
 .hero-date {
   font-family: 'Sarabun', sans-serif;
-  font-size: 15px;            /* ปรับขนาดตัวอักษร */
-  letter-spacing: 4px;        /* ระยะช่องไฟ */
-  color: var(--ink);
-  margin-top: 20px;           /* ระยะห่างจากชื่อบ่าวสาวด้านบน */
+  font-size: 15px;
+  letter-spacing: 4px;
+  color: #FFFFFF;                              /* เปลี่ยนเป็นสีขาว */
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6); /* เพิ่มเงาดำด้านหลัง */
+  margin-top: 20px;
 }
 
 /* ══ INVITATION ══ */
