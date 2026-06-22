@@ -643,18 +643,37 @@ select.form-select:focus { border-bottom-color: var(--gold); outline: none; }
    ปรับการแสดงผลสำหรับหน้าจอคอมพิวเตอร์ (Desktop)
    ========================================= */
 @media (min-width: 768px) {
-  /* ทำให้พื้นหลังจอคอมพิวเตอร์รอบๆ เป็นสีเทา/ครีมอ่อนๆ ให้การ์ดดูโดดเด่น */
   html {
-    background-color: #EFEBE0; 
+    background-color: #EFEBE0 !important; 
+  }
+  body {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    position: relative !important;
+    background-color: #FAF6EE !important;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2) !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important; /* ซ่อนส่วนที่ล้นออกไป ป้องกันการเลื่อนซ้ายขวา */
   }
 
-  /* จำกัดความกว้างของการ์ดให้เท่ากับมือถือ และจัดให้อยู่กึ่งกลาง */
-  body {
-    max-width: 500px;
-    margin: 0 auto;
-    position: relative;
-    background-color: var(--cream); /* ใช้สีพื้นหลังเดิมของการ์ด */
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15); /* เพิ่มเงาให้ดูเป็นการ์ดกระดาษ */
-    min-height: 100vh;
+  /* 1. แก้รายชื่อพ่อแม่และบ่าวสาวล้น (ย่อขนาดฟอนต์ให้พอดีกล่อง 500px) */
+  .family-text {
+    font-size: 14px !important; 
+  }
+  .couple-names-large {
+    font-size: 22px !important; 
+    gap: 8px !important;
+  }
+  
+  /* 2. แก้ข้อความหน้าปกใหญ่ทะลุจอ */
+  /* หมายเหตุ: ผมใส่คลาสเผื่อไว้ให้ แต่ถ้าลองแล้วหน้าปกยังใหญ่อยู่ รบกวนก๊อปปี้โค้ด HTML ส่วนหน้าปกมาให้ผมนิดนึงนะครับ */
+  .hero-bg h1, .hero-content h1, h1 {
+    font-size: 42px !important;
+  }
+  .hero-bg h2, .hero-content h2, h2, .hero-date {
+    font-size: 24px !important;
+  }
+  .hero-bg p, .hero-content p {
+    font-size: 18px !important;
   }
 }
