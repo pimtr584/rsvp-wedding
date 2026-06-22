@@ -20,11 +20,9 @@
 
   <div class="hero-content">
     <p class="hero-eyebrow">WEDDING CEREMONY</p>
-  
     <h1 class="hero-names">
       Pimchanok <span class="hero-amp">&amp;</span> Taryn
     </h1>
-  
     <p class="hero-date" style="margin-top: 15px;">LE PASIRI &nbsp;|&nbsp; 5.9.69</p>
   </div>
 </section>
@@ -34,21 +32,17 @@
     <span class="label">คำเชิญ</span>
     
     <div style="display: flex; justify-content: center; align-items: center; width: 100%; margin-bottom: 1.5rem;">
-      
       <div style="flex: 1; text-align: center;">
         <p class="family-text" style="margin: 0; line-height: 1.6;">นายสาโรจน์ ไตรสินธุ์</p>
         <p class="family-text" style="margin: 0; line-height: 1.6;">นางสมิตานัน ไตรสินธุ์</p>
       </div>
-      
       <div style="padding: 0 10px;">
         <span class="family-and">และ</span>
       </div>
-      
       <div style="flex: 1; text-align: center;">
         <p class="family-text" style="margin: 0; line-height: 1.6;">นายเสกสรร สุขเนาว์</p>
         <p class="family-text" style="margin: 0; line-height: 1.6;">นางจิรพันธ์ สุขเนาว์</p>
       </div>
-      
     </div>
 
     <p class="invite-body">มีความยินดีเชิญท่านเป็นเกียรติ เนื่องในงานมงคลสมรส</p>
@@ -59,7 +53,6 @@
       <span class="couple-amp" style="margin: 0;">&amp;</span>
       <span style="white-space: nowrap;">ธารินทร์ สุขเนาว์ (นุก)</span>
     </div>
-    
   </div>
 </section>
 
@@ -84,9 +77,9 @@
   <h2 class="section-title">Order of the Day</h2>
   <ul class="schedule-list">
     <li class="schedule-row"><span class="sch-time">07.09</span><span class="sch-name">พิธีสงฆ์</span></li>
-    <li class="schedule-row"><span class="sch-time">08.29</span><span class="sch-name">แห่ขันหมาก</span></li>
+    <li class="schedule-row"><span class="sch-time">08.39</span><span class="sch-name">แห่ขันหมาก</span></li>
     <li class="schedule-row"><span class="sch-time">10.09</span><span class="sch-name">รดน้ำสังข์</span></li>
-    <li class="schedule-row"><span class="sch-time">11.00</span><span class="sch-name">ร่วมรับประทานอาหาร</span></li>
+    <li class="schedule-row"><span class="sch-time">11.09</span><span class="sch-name">ร่วมรับประทานอาหาร</span></li>
   </ul>
 
   <div class="theme-colors">
@@ -105,3 +98,84 @@
   <span class="divider-mark">ตอบรับการเข้าร่วม</span>
   <div class="divider-line"></div>
 </div>
+
+<section class="rsvp-section" id="rsvp">
+  <span class="label" style="text-align:center;display:block;margin-bottom:0.75rem;">RSVP</span>
+  <h2 class="rsvp-title">ยืนยันการเข้าร่วม</h2>
+  <p class="rsvp-sub">กรุณาตอบรับเพื่อให้เราจัดเตรียมพร้อมสำหรับทุกท่าน</p>
+
+  <div class="form-wrap" id="formWrap">
+    
+    <div class="form-group">
+      <label class="form-label" for="guestName">ชื่อ – นามสกุล หรือ ชื่อเล่น หรือ ชื่อที่สามารถระบุตัวตนได้ง่าย </label>
+      <input type="text" id="guestName" placeholder="กรอกชื่อของท่าน" autocomplete="name">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">ท่านสามารถมาร่วมงานหรือไม่</label>
+      <div class="toggle-group">
+        <input type="radio" name="attend" id="yes" value="ยืนยันเข้าร่วมงาน">
+        <label for="yes">ยืนยันเข้าร่วมงาน</label>
+        <input type="radio" name="attend" id="no" value="ไม่สามารถเข้าร่วมงาน">
+        <label for="no">ไม่สามารถเข้าร่วมงาน</label>
+      </div>
+    </div>
+
+    <div class="form-group count-group hidden" id="countGroup">
+      <label class="form-label">จำนวนผู้เข้าร่วม (รวมท่านด้วย)</label>
+      <div class="count-control">
+        <button class="count-btn" id="countDown" type="button">−</button>
+        <span class="count-display" id="countDisplay">1</span>
+        <button class="count-btn" id="countUp" type="button">+</button>
+      </div>
+      <input type="hidden" id="guestCount" value="1">
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">ท่านเป็นแขกฝั่งใด</label>
+      <div class="side-options">
+        <div class="side-option">
+          <input type="radio" name="side" id="side-groom" value="ฝั่งเจ้าบ่าว">
+          <label for="side-groom">
+            <span class="side-name">นุก</span>
+            <span class="side-sub">ฝั่งเจ้าบ่าว</span>
+          </label>
+        </div>
+        <div class="side-option">
+          <input type="radio" name="side" id="side-bride" value="ฝั่งเจ้าสาว">
+          <label for="side-bride">
+            <span class="side-name">ตอง</span>
+            <span class="side-sub">ฝั่งเจ้าสาว</span>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="extra-fields" id="extraFields">
+      <div class="form-group" style="margin-bottom:0;">
+        <label class="form-label">ความสัมพันธ์</label>
+        <select class="form-select" id="relationship">
+          <option value="" disabled selected>กรุณาเลือก</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group" style="margin-top:1.6rem; margin-bottom:0;">
+      <label class="form-label">ประเภทการกรอก</label>
+      <div class="mini-radio-group">
+        <input type="radio" name="fillType" id="fill-first" value="การกรอกครั้งแรก">
+        <label for="fill-first">การกรอกครั้งแรก</label>
+        <input type="radio" name="fillType" id="fill-edit" value="การแก้ไข">
+        <label for="fill-edit">การแก้ไข</label>
+      </div>
+    </div>
+
+    <button class="btn-submit" id="submitBtn" type="button">ส่งการตอบรับ</button>
+    <p class="status-msg" id="statusMsg"></p>
+    
+  </div>
+
+  <div class="success-card" id="successCard">
+    <span class="success-icon">Thank you</span>
+    <h3 class="success-title" id="successTitle">ขอบคุณมาก</h3>
+    <p class="success-text" id="successText">เราได้รับการตอบรับของท่านแล้ว<br>แล้วพบกัน
