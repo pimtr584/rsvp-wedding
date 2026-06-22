@@ -284,6 +284,25 @@ body {
   line-height: 1.6;
 }
 
+/* ตกแต่งลิงก์แผนที่ให้เหมือนปุ่มเล็กๆ */
+.map-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  font-family: 'Sarabun', sans-serif;
+  font-size: 0.75rem;
+  color: var(--white);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 2px;
+  transition: all 0.3s;
+}
+
+.map-link:hover {
+  color: var(--ink);
+  border-bottom-color: var(--ink);
+}
+
+
 /* ══ SCHEDULE ══ */
 .schedule-section {
   padding: 5rem 2rem;
