@@ -353,8 +353,9 @@ body {
 }
 
 .sch-time {
-  font-family: 'Cormorant Garamond', serif; /* ให้ตัวเลขเป็น Garamond */
-  font-size: 1.15rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-variant-numeric: lining-nums tabular-nums; /* บังคับให้ฐานตัวเลขเรียงตรงกันและสูงเท่ากัน */
+  font-size: 1.25rem;                             /* ปรับขนาดให้ใหญ่ขึ้นนิดนึงเพื่อความสมดุล */
   letter-spacing: 0.05em;
   color: var(--gold);
   font-weight: 500;
